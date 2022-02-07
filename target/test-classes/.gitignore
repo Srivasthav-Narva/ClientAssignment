@@ -1,6 +1,5 @@
-/assertions/
 /featureFiles/
 /parameterization/
-/restAssuredScripts/
+/parameterizationfeature/
 /stepDefinition/
-/testRunner/
+/dataprovider.class
