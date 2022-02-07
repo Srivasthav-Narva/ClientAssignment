@@ -16,73 +16,38 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class DataproviderStepdef {
-	
-	String uri="https://reqres.in";
-	//Response response;
-	
 	RequestSpecification request;
 	Response response;
-	JSONObject req=new JSONObject();
 	
-	@DataProvider(name="DataForPost")
-	public Object [][] dataForPost()	
-	{
-		
-				Object[][] data=new Object[2][2];
-				data[0][0]="Vastav";
-				data[0][1]="Designer";
-				
-				data[1][0]="Chinnu";
-				data[0][1]="Engineer";
-			
-				return data;
-				
-				
-			
-	}
-	@Given("An Api for testing post method")
-	public void an_api_for_testing_post_method() {
+	@Given("An url for api testing")
+	public void an_url_for_api_testing() {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		
-		
-		RestAssured.baseURI="https://reqres.in";	
-		request=given().header("content-type","application/json").
-				body(req.toJSONString());
-		
+		System.out.println(" Base URL is given");
+		RestAssured.baseURI="https://reqres.in";
+		request=given().header("content-type","application/json");
 	}
-		
-	
 
-
-
-	@SuppressWarnings("unchecked")
-	@Test(dataProvider="DataForPost")
-	@When("posted the correct information with dataprovider {string} and {string}")
-	public void posted_the_correct_information_with_dataprovider_and(String name, String job) {
-	    // Write code here that turns the phrase above into concrete actions
-	   // throw new io.cucumber.java.PendingEx
-		//String path="api/users";
-		req.put("name", name);
-		req.put("job", job);
-		System.out.println("When");
-		String path="api/users";
-		response=request.post(path).then().log().all().extract().response();
-		
-		
-		
-	}
-	@Test(dataProvider="DataForPost")
-	@Then("validate the response code {string} and {string}")
-	public void validate_the_response_code_and(String name, String job) {
+	@When("enter the path of the given method {string}")
+	public void enter_the_path_of_the_given_method(String path) {
 	    // Write code here that turns the phrase above into concrete actions
 	   // throw new io.cucumber.java.PendingException();
-		System.out.println("Then");
-		System.out.println("response status code : "+response.getStatusCode()); 
-		System.out.println("response status line : "+response.getStatusLine());
-//		Assert.assertEquals("HTTP/1.1 201 Created", response.getStatusLine());
-		Assert.assertEquals(201, response.getStatusCode());
-		
+		System.out.println(" path of get method {string}");
+		   
+		   response=request.get(path).then().log().all().extract().response();
+	}
+
+	@Then("Validate response code")
+	public void validate_response_code() {
+	    // Write code here that turns the phrase above into concrete actions
+	    //throw new io.cucumber.java.PendingException();
+		System.out.println(" Validate status code");
+		int statusCode= response.getStatusCode();
+		String statusLine =response.getStatusLine();
+		 System.out.println("status Line is "+statusLine);
+		  System.out.println("status code is "+statusCode);
+		  Assert.assertEquals(200, statusCode);
+		  Assert.assertEquals("HTTP/1.1 200 OK", statusLine);
 	}
 
 }

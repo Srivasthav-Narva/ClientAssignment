@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-04T12:57:29 IST" name="Default suite" finished-at="2022-02-04T12:57:35 IST" duration-ms="5163">
+  <suite started-at="2022-02-07T01:55:00 IST" name="Default suite" finished-at="2022-02-07T01:55:03 IST" duration-ms="3396">
     <groups>
     </groups>
-    <test started-at="2022-02-04T12:57:29 IST" name="Default test" finished-at="2022-02-04T12:57:35 IST" duration-ms="5163">
-      <class name="parameterization.Datadriven">
-        <test-method signature="test_post(java.lang.String,java.lang.String)[pri:0, instance:parameterization.Datadriven@5fdcaa40]" started-at="2022-02-04T12:57:30 IST" name="test_post" data-provider="DataForPost" finished-at="2022-02-04T12:57:33 IST" duration-ms="3448" status="PASS">
+    <test started-at="2022-02-07T01:55:00 IST" name="Default test" finished-at="2022-02-07T01:55:03 IST" duration-ms="3396">
+      <class name="dataprovider">
+        <test-method signature="test_post(java.lang.String,java.lang.String)[pri:0, instance:dataprovider@5e0826e7]" started-at="2022-02-07T01:55:00 IST" name="test_post" data-provider="postdata" finished-at="2022-02-07T01:55:03 IST" duration-ms="2633" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_post -->
-        <test-method signature="test_post(java.lang.String,java.lang.String)[pri:0, instance:parameterization.Datadriven@5fdcaa40]" started-at="2022-02-04T12:57:33 IST" name="test_post" data-provider="DataForPost" finished-at="2022-02-04T12:57:33 IST" duration-ms="403" status="PASS">
+        <test-method signature="test_post(java.lang.String,java.lang.String)[pri:0, instance:dataprovider@5e0826e7]" started-at="2022-02-07T01:55:03 IST" name="test_post" data-provider="postdata" finished-at="2022-02-07T01:55:03 IST" duration-ms="371" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,7 +39,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_post -->
-        <test-method signature="test_post(java.lang.String,java.lang.String)[pri:0, instance:parameterization.Datadriven@5fdcaa40]" started-at="2022-02-04T12:57:33 IST" name="test_post" data-provider="DataForPost" finished-at="2022-02-04T12:57:34 IST" duration-ms="409" status="PASS">
+        <test-method signature="test_post(java.lang.String,java.lang.String)[pri:0, instance:dataprovider@5e0826e7]" started-at="2022-02-07T01:55:03 IST" name="test_post" data-provider="postdata" finished-at="2022-02-07T01:55:03 IST" duration-ms="339" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -48,46 +48,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[Industrialist]]>
+                <![CDATA[Industrilaist]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_post -->
-        <test-method signature="test_post(java.lang.String,java.lang.String)[pri:0, instance:parameterization.Datadriven@5fdcaa40]" started-at="2022-02-04T12:57:34 IST" name="test_post" data-provider="DataForPost" finished-at="2022-02-04T12:57:34 IST" duration-ms="420" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Dr.Strange]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Magician]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_post -->
-        <test-method signature="test_post(java.lang.String,java.lang.String)[pri:0, instance:parameterization.Datadriven@5fdcaa40]" started-at="2022-02-04T12:57:34 IST" name="test_post" data-provider="DataForPost" finished-at="2022-02-04T12:57:35 IST" duration-ms="409" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[SteveRogers]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Captain]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_post -->
-      </class> <!-- parameterization.Datadriven -->
+      </class> <!-- dataprovider -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
